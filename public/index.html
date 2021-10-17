@@ -1,87 +1,137 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" href="style.css">
-<meta charset="utf-8">
-<title>Display Webcam Stream</title>
- 
-<style>
-#container {
-	margin: 25px auto;
-	width: 750px;
-	height: 569px;
-	border: 10px #333 solid;
-}
-#container2 {
-	margin: 25px auto;
-	width: 300px;
-	height: 569px;
-	border: 10px #333 solid;
-  margin-left: 0px;
-}
-#container3 {
-	margin: 25px auto;
-	width: 300px;
-	height: 569px;
-	border: 10px #333 solid;
-  margin-right: 0px;
-}
-#videoElement {
-	width: 750px;
-	height: 550px;
-    transform: scaleX(-1);
-	background-color: rgb(28, 28, 28);
-}
-body {
-  background-color: rgb(19, 19, 19);
-}
 
-</style>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <title>CamView</title>
+
+  <style>
+    #container {
+      margin: 25px auto;
+      width: 750px;
+      height: 586px;
+      background-color: rgb(21, 21, 21);
+      border: 0px #333 transparent;
+      opacity: 72%;
+      border-radius: 9px
+    }
+    #container-header {
+      width: 750px;
+      height: 26px;
+      border-top-left-radius: 9px;
+      border-top-right-radius: 9px;
+      background-color: rgb(12, 12, 12);
+      opacity: 70%;
+    }
+
+    #container2 {
+      margin: 25px auto;
+      width: 291px;
+      height: 586px;
+      border: 1px rgb(0, 0, 0) transparent;
+      background-color: rgb(21, 21, 21);
+      opacity: 72%;
+      margin-left: 0px;
+      border-radius: 9px;
+    }
+    #container2-header {
+      width: 291px;
+      height: 26px;
+      border-top-left-radius: 9px;
+      border-top-right-radius: 9px;
+      background-color: rgb(12, 12, 12);
+      opacity: 70%;
+    }
+
+    #container3 {
+      margin: 25px auto;
+      width: 291px;
+      height: 586px;
+      border: 1px rgb(0, 0, 0) transparent;
+      background-color: rgb(21, 21, 21);
+      opacity: 72%;
+      margin-left: 0px;
+      border-radius: 9px;
+    }
+    #container3-header {
+      width: 291px;
+      height: 26px;
+      border-top-left-radius: 9px;
+      border-top-right-radius: 9px;
+      background-color: rgb(12, 12, 12);
+      opacity: 70%;
+    }
+
+    #videoElement {
+      padding-top: 5px;
+      width: 768px;
+      height: 552px;
+      transform: scaleX(-1);
+    }
+
+    body {
+      background-color: rgb(29, 29, 29);
+    }
+  </style>
 </head>
 
 <body>
-    
-<main>
 
+  <main>
 
-<div class="flex">
-    <div class="flex-auto w-16 h-16">
-      <div id="container2" class="text-white">
-        <a id="button" class="focus:outline-black bg-black bg-opacity-40 rounded-xl py-1 px-12 mx-4 my-7 float-left">Button A</a>
+    <div class="flex">
+
+      <div class="flex-auto w-16 h-16 px-5">
+        <div id="container2" class="text-white space-y-2">
+          <div id="container2-header">
+          <h1 class="font-bold text-left px-2"> Effects </h1> 
+         </div>
+          <!--  <a id="button" class="focus:outline-black bg-black bg-opacity-40 rounded-xl py-1 px-12 mx-4 my-7 float-left">Button A</a> -->
         </div>
-    </div>
 
-    <div class="flex-none h-16">
+
+      </div>
+
+      <div class="flex-none h-16">
         <div id="container">
-            <video autoplay="true" id="videoElement" class="filter invert">          
-            </video>
+          <div id="container-header">
+            <h1 class="font-bold text-left px-2 text-white"> Camera </h1> 
+           </div>
+          <video autoplay="true" id="videoElement" class="filter contrast-70">
+          </video>
         </div>
-    </div>
+      </div>
 
-    <div class="flex-auto w-16 h-16">
-      <div id="container3" class="text-white">
-        <a id="button" class="focus:outline-black bg-black bg-opacity-40 rounded-xl py-1 px-12 mx-4 my-7 float-right">Button A</a>
+      <div class="flex-auto w-16 h-16">
+        <div id="container3" class="text-white">
+          <div id="container3-header">
+            <h1 class="font-bold text-left px-2 text-white"> Recording </h1> 
+           </div>
+          <a id="button"
+            class="focus:outline-black bg-black bg-opacity-40 rounded-xl py-1 px-12 mx-4 my-7 float-right">Button A</a>
         </div>
+      </div>
+
     </div>
-  </div>
-</main>
+  </main>
 
-<script>
-var video = document.querySelector("#videoElement");
+  <script>
+    var video = document.querySelector("#videoElement");
 
-if (navigator.mediaDevices.getUserMedia) {
-  navigator.mediaDevices.getUserMedia({ video: true })
-    .then(function (stream) {
-      video.srcObject = stream;
-    })
-    .catch(function (err0r) {
-      console.log("Something went wrong!");
-    });
-}
+    if (navigator.mediaDevices.getUserMedia) {
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function (stream) {
+          video.srcObject = stream;
+        })
+        .catch(function (err0r) {
+          console.log("Something went wrong!");
+        });
+    }
 
 
-</script> 
+  </script>
 
 </body>
+
 </html>
