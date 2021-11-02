@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/jquery": "^3.5.8",
+    "jquery": "^3.6.0",
     "tailwindcss": "^2.2.17"
   }
 }
