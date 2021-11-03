@@ -67,10 +67,10 @@
 
     .buttonElement {
       background-color: rgb(12, 12, 12);
-      font-size: 18px;
-      opacity: 60%;
-      padding: 34px;
-      padding-top: 8px;
+      font-size: 19px;
+      opacity: 50%;
+      padding-top: 6px;
+      margin: 2px;
       padding-bottom: 8px;
       border-radius: 10px;
     }
@@ -98,8 +98,36 @@
       background-color: rgb(29, 29, 29);
     }
     
-    .sepia{ 
-      -webkit-filter: grayscale();
+    .sepia { 
+      -webkit-filter: sepia(60%);
+    }
+
+    .grayscale {
+      -webkit-filter: grayscale(100%);
+    }
+
+    .hue{
+      filter: hue-rotate(180deg);
+    }
+
+    .blur{
+      filter: blur(5px);
+    }
+
+    .invert {
+      filter: invert(100%) contrast(120%);
+    }
+
+    .warm{
+
+    }
+
+    .cool{
+
+    }
+
+    .nightvis {
+      filter: hue-rotate(130deg) saturate(60%) brightness(280%) contrast(50%);
     }
   </style>
 </head>
@@ -118,35 +146,33 @@
 
           <div class="grid grid-cols-2 flex items-stretch place-content-center gap-3 m-3 p-2">
 
-            <div class="self-auto">
-             <button id="effect-noeffect" class="buttonElement"> Default </button>
-             <button id="effect-sepia" class="buttonElement"> Sepia </button>
-            </div>
+       
+             <button id="effect-noeffect" class="buttonElement col-span-1"> No Filter </button>
+             <button id="effect-sepia" class="buttonElement col-span-1"> Sepia </button>
+      
+             <button id="effect-grayscale" class="buttonElement col-span-1"> Grayscale</button>
+             <button id="effect-hue" class="buttonElement col-span-1"> Hue </button>
 
-            <div class="self-auto">
-             <button id="effect-sepia" class="buttonElement"> Blur </button>
-             <button id="effect-sepia" class="buttonElement"> Night </button>
-            </div>
+              <button id="effect-blur" class="buttonElement col-span-1"> Blur </button>
+              <button id="effect-invert" class="buttonElement col-span-1"> Invert </button>
+ 
+              <button id="effect-warm" class="buttonElement col-span-1"> Warm </button>
+              <button id="effect-cool" class="buttonElement col-span-1"> Cool </button>
 
-            <div class="self-auto">
-              <button id="effect-sepia" class="buttonElement"> Sharp </button>
-              <button id="effect-sepia" class="buttonElement"> Chromatic </button>
-            </div>
-            
-              <div class="self-auto">
-              <button id="effect-sepia" class="buttonElement"> Warm </button>
-              <button id="effect-sepia" class="buttonElement"> Cool </button>
-            </div>
+              <button id="effect-nightvis" class="buttonElement col-span-1"> Night </button>
+              <button id="effect-sepia" class="buttonElement col-span-1"> WIP </button>
 
-            <div class="self-auto">
-              <button id="effect-sepia" class="buttonElement"> Warm </button>
-              <button id="effect-sepia" class="buttonElement"> Cool </button>
-            </div>
+              <button id="effect-noeffect" class="buttonElement col-span-1"> WIP </button>
+              <button id="effect-sepia" class="buttonElement col-span-1"> WIP </button>
 
-            <div class="self-auto">
-              <button id="effect-noeffect" class="buttonElement"> Sepia </button>
-              <button id="effect-sepia" class="buttonElement"> B&W </button>
-            </div>
+              <button id="effect-noeffect" class="buttonElement col-span-1"> WIP </button>
+              <button id="effect-sepia" class="buttonElement col-span-1"> WIP </button>
+              
+              <button id="effect-noeffect" class="buttonElement col-span-1"> WIP </button>
+              <button id="effect-sepia" class="buttonElement col-span-1"> WIP </button>
+
+              <button id="effect-noeffect" class="buttonElement col-span-1"> WIP </button>
+              <button id="effect-sepia" class="buttonElement col-span-1"> WIP </button>
 
             <!--  <a id="button" class="focus:outline-black bg-black bg-opacity-40 rounded-xl py-1 px-12 mx-4 my-7 float-left">Button A</a> -->
           </div>
@@ -188,42 +214,29 @@
 
   </main>
 
-  <script>
-    var video = document.querySelector("#videoElement");
-
-    if (navigator.mediaDevices.getUserMedia) {
-      navigator.mediaDevices.getUserMedia({ video: true })
-        .then(function (stream) {
-          video.srcObject = stream;
-        })
-        .catch(function (err0r) {
-          console.log("Something went wrong!");
-        });
-    }
-  </script>
+  <script src="/filter/videoElement.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
- 
-  <script>
-    $("#effect-sepia .buttonElement").click(function(){
-    $("#effect-sepia .buttonElement").removeClass('active');
-    $(this).toggleClass('active'); 
-    });
-  </script>
 
-  <script>
-    $("#effect-sepia").click(function() {
-        $("#videoElement").addClass("sepia");
-      });
-  </script>
+  <script src="/filter/noeffect.js"></script>
 
-<script>
-  $("#effect-noeffect").click(function() {
-      $("#videoElement").removeClass("sepia");
-    });
-</script>
+  <script src="/filter/sepia.js"></script>
 
-  <script src="js/filter.js"></script>  
+  <script src="/filter/grayscale.js"></script>
+
+  <script src="/filter/hue.js"></script>
+
+  <script src="/filter/blur.js"></script>
+
+  <script src="/filter/invert.js"></script>
+
+  <script src="/filter/warm.js"></script>
+
+  <script src="/filter/cool.js"></script>
+
+  <script src="/filter/nightvis.js"></script>
+  
+
 </body>
 
 </html>
