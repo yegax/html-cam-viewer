@@ -11,7 +11,7 @@ video.addEventListener('loadedmetadata', function() {
   //calculate ratio of video, w to h
   ratio = video.videoWidth / video.videoHeight;
   //define the required width as 100px smaller tha the actual video w
-  w = video.videoWidth - 10;
+  w = video.videoWidth + 250;
   //calculate h based on width and ratio
   h = parseInt(w / ratio, 10);
   //set canvas values to the calc of w and h
