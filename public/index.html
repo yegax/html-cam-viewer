@@ -52,7 +52,7 @@
       border: 1px rgb(0, 0, 0) transparent;
       background-color: rgb(21, 21, 21);
       opacity: 72%;
-      margin-left: 8px;
+      margin-left: 9px;
       border-radius: 9px;
     }
 
@@ -68,7 +68,7 @@
     .buttonElement {
       background-color: rgb(12, 12, 12);
       font-size: 19px;
-      opacity: 50%;
+      opacity: 60%;
       padding-top: 6px;
       margin: 2px;
       padding-bottom: 8px;
@@ -94,12 +94,16 @@
       transform: scaleX(-1);
     }
 
+    .flipimg {
+      transform: scaleX(-1);
+    }
+
     body {
       background-color: rgb(29, 29, 29);
     }
     
     .sepia { 
-      filter: sepia(60%);
+      filter: sepia(80%)saturate(160%);
     }
 
     .grayscale {
@@ -107,7 +111,7 @@
     }
 
     .grayscale2 {
-      filter: grayscale(100%);
+      filter: grayscale(100%)contrast(130%)brightness(160%)blur(0.5px);
     }
 
     .hue{
@@ -131,7 +135,7 @@
     }
 
     .nightvis {
-      filter: hue-rotate(130deg) saturate(60%) brightness(280%) contrast(50%);
+      filter: hue-rotate(130deg)saturate(60%)brightness(280%)contrast(50%);
     }
   </style>
 </head>
@@ -144,6 +148,7 @@
 
       <div class="flex-auto w-16 h-16 px-5">
         <div id="container2" class="text-white space-y-2">
+
           <div id="container2-header">
             <h1 class="font-bold text-left px-2"> Effects </h1> 
           </div>
@@ -185,35 +190,48 @@
 
       <div class="flex-none h-16">
         <div id="container">
+
           <div id="container-header">
             <h1 class="font-bold text-left px-2 text-white"> Camera </h1> 
            </div>
+
           <video autoplay="true" id="videoElement" class="filter contrast-70">
           </video>
+
         </div>
+        <br>
+
+        <div class="text-align-bottom">
+          <p class="font-mono opacity-25 text-white text-xs text-center"> Powered by 
+          <a href="https://www.yegax.com/"><u>  Yegax Digital</u> </a> </p>
+          <p class="font-mono opacity-25 text-white text-xs text-center"> 2021 </p>
+        </div>
+
       </div>
 
       <div class="flex-auto w-16 h-16 px-5">
         <div id="container3" class="text-white space-y-2">
+
           <div id="container3-header">
           <h1 class="font-bold text-left px-2"> Recording </h1> 
-         </div>
-          <!--  <a id="button" class="focus:outline-black bg-black bg-opacity-40 rounded-xl py-1 px-12 mx-4 my-7 float-left">Button A</a> -->
+          </div>
+
+          <div class="grid grid-cols-2 flex items-stretch place-content-center gap-3 m-3 p-2">
+
+            <button id="snap" onclick="snap()" class="buttonElement col-span-1"> Screenshot </button>
+            <button id="snap-download" class="buttonElement col-span-1"> Download </button>
+            <canvas class="w-60 h-55 content-center rounded-xl mx-1.5 flipimg"></canvas>
+
+          </div>
         </div>
-
-
       </div>
       
 
     </div>
 
     <footer>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <div class="text-align-bottom">
-      <p class="font-mono opacity-25 text-white text-xs text-center"> Powered by 
-        <a href="https://www.yegax.com/"><u>  Yegax Digital</u> </a> </p>
-        <p class="font-mono opacity-25 text-white text-xs text-center"> 2021 </p>
-    </div>
+      
+
     </footer>
 
   </main>
@@ -221,6 +239,8 @@
   <script src="/filter/videoElement.js"></script>
   <script src="https://combinatronics.com/yegax/html-cam-viewer/master/filter/videoElement.js"></script>
 
+  <script>"/filter/snap.js"</script>
+  <script>"https://combinatronics.com/yegax/html-cam-viewer/master/filter/snap.js"</script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
