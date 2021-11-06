@@ -18,18 +18,16 @@
 
   <main>
 
+    <div class="">
     <div class="flex">
 
       <div class="flex-none h-16 px-5">
         <div id="container2" class="text-white space-y-2">
-
           <div id="container2-header">
             <h1 class="font-bold text-left px-2"> Effects </h1> 
           </div>
-
           <div class="grid grid-cols-2 flex items-stretch place-content-center gap-3 m-3 p-2">
 
-       
              <button id="effect-noeffect" class="buttonElement col-span-1"> No Filter </button>
              <button id="effect-sepia" class="buttonElement col-span-1"> Sepia </button>
       
@@ -56,51 +54,41 @@
 
               <button id="effect-noeffect" class="buttonElement col-span-1"> WIP </button>
               <button id="effect-sepia" class="buttonElement col-span-1"> WIP </button>
-
-            <!--  <a id="button" class="focus:outline-black bg-black bg-opacity-40 rounded-xl py-1 px-12 mx-4 my-7 float-left">Button A</a> -->
+            <!-- COMMENT -->
           </div>
         </div>
       </div>
 
       <div class="flex-none h-16">
         <div id="container">
-
           <div id="container-header">
             <h1 class="font-bold text-left px-2 text-white"> Camera </h1> 
-           </div>
-
+          </div>
           <video autoplay="true" id="videoElement" class="filter contrast-70">
           </video>
-
         </div>
         <br>
-
         <div class="text-align-bottom">
           <p class="font-mono opacity-25 text-white text-xs text-center"> Powered by 
           <a href="https://www.yegax.com/"><u>  Yegax Digital</u> </a> </p>
           <p class="font-mono opacity-25 text-white text-xs text-center"> 2021 </p>
         </div>
-
       </div>
 
       <div class="flex-auto w-16 h-16 px-5">
         <div id="container3" class="text-white space-y-2">
-
           <div id="container3-header">
           <h1 class="font-bold text-left px-2"> Recording </h1> 
           </div>
-
           <div class="grid grid-cols-2 flex items-stretch place-content-center gap-3 m-3 p-2">
-
             <button id="snap" onclick="snap()" class="buttonElement col-span-1"> Screenshot </button>
             <button id="download" class="buttonElement col-span-1"> Download </button>
             <canvas class="w-60 h-55 content-center rounded-xl mx-1.5 flipimg"></canvas>
-
           </div>
         </div>
       </div>
       
-
+    </div>
     </div>
 
     <footer>
