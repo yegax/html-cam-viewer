@@ -1,0 +1,35 @@
+.sepia { 
+    filter: sepia(80%)saturate(160%);
+  }
+
+  .grayscale {
+    filter: grayscale(100%);
+  }
+
+  .grayscale2 {
+    filter: grayscale(100%)contrast(130%)brightness(160%)blur(0.5px);
+  }
+
+  .hue{
+    filter: hue-rotate(180deg);
+  }
+
+  .blur{
+    filter: blur(5px);
+  }
+
+  .invert {
+    filter: invert(100%) contrast(120%);
+  }
+
+  .warm{
+    filter: hue-rotate();
+  }
+
+  .cool{
+    filter: hue-rotate();
+  }
+
+  .nightvis {
+    filter: hue-rotate(130deg)saturate(60%)brightness(280%)contrast(50%);
+  }

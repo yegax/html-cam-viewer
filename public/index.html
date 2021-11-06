@@ -3,140 +3,14 @@
 
 <head>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-b.css">
+  <link rel="stylesheet" href="/filter/filter.css"
+
   <meta charset="utf-8">
   <title>CamView</title>
 
   <style>
-    #container {
-      margin-top: 25px;
-      width: 750px;
-      height: 586px;
-      background-color: rgb(21, 21, 21);
-      border: 0px #333 transparent;
-      opacity: 72%;
-      border-radius: 9px
-    }
-    #container-header {
-      width: 750px;
-      height: 26px;
-      border-top-left-radius: 9px;
-      border-top-right-radius: 9px;
-      background-color: rgb(12, 12, 12);
-      opacity: 70%;
-    }
 
-    #container2 {
-      margin-top: 25px;
-      width: 291px;
-      height: 586px;
-      border: 1px rgb(0, 0, 0) transparent;
-      background-color: rgb(21, 21, 21);
-      opacity: 72%;
-      margin-right: 9px;
-      border-radius: 9px;
-    }
-
-    #container2-header {
-      width: 291px;
-      height: 26px;
-      border-top-left-radius: 9px;
-      border-top-right-radius: 9px;
-      background-color: rgb(12, 12, 12);
-      opacity: 70%;
-    }
-
-    #container3 {
-      margin-top: 25px;
-      width: 291px;
-      height: 586px;
-      border: 1px rgb(0, 0, 0) transparent;
-      background-color: rgb(21, 21, 21);
-      opacity: 72%;
-      margin-left: 9px;
-      border-radius: 9px;
-    }
-
-    #container3-header {
-      width: 291px;
-      height: 26px;
-      border-top-left-radius: 9px;
-      border-top-right-radius: 9px;
-      background-color: rgb(12, 12, 12);
-      opacity: 70%;
-    }
-
-    .buttonElement {
-      background-color: rgb(12, 12, 12);
-      font-size: 19px;
-      opacity: 60%;
-      padding-top: 6px;
-      margin: 2px;
-      padding-bottom: 8px;
-      border-radius: 10px;
-    }
-    .buttonElement:hover{
-      background-color: rgb(36, 36, 36);
-    }
-    .active{
-      background-color: rgb(36, 36, 36);
-    }
-    .buttonElement:active{
-      background-color: rgb(36, 36, 36);
-    }
-    button.buttonElement:active{
-      background-color: rgb(36, 36, 36);
-    }
-
-    #videoElement {
-      padding-top: 5px;
-      width: 768px;
-      height: 552px;
-      transform: scaleX(-1);
-    }
-
-    .flipimg {
-      transform: scaleX(-1);
-    }
-
-    body {
-      background-color: rgb(29, 29, 29);
-    }
-    
-    .sepia { 
-      filter: sepia(80%)saturate(160%);
-    }
-
-    .grayscale {
-      filter: grayscale(100%);
-    }
-
-    .grayscale2 {
-      filter: grayscale(100%)contrast(130%)brightness(160%)blur(0.5px);
-    }
-
-    .hue{
-      filter: hue-rotate(180deg);
-    }
-
-    .blur{
-      filter: blur(5px);
-    }
-
-    .invert {
-      filter: invert(100%) contrast(120%);
-    }
-
-    .warm{
-      filter: hue-rotate();
-    }
-
-    .cool{
-      filter: hue-rotate();
-    }
-
-    .nightvis {
-      filter: hue-rotate(130deg)saturate(60%)brightness(280%)contrast(50%);
-    }
   </style>
 </head>
 
@@ -219,7 +93,7 @@
           <div class="grid grid-cols-2 flex items-stretch place-content-center gap-3 m-3 p-2">
 
             <button id="snap" onclick="snap()" class="buttonElement col-span-1"> Screenshot </button>
-            <button id="snap-download" class="buttonElement col-span-1"> Download </button>
+            <button id="download" class="buttonElement col-span-1"> Download </button>
             <canvas class="w-60 h-55 content-center rounded-xl mx-1.5 flipimg"></canvas>
 
           </div>
@@ -241,6 +115,9 @@
 
   <script src="/filter/snap.js"></script>
   <script src="https://combinatronics.com/yegax/html-cam-viewer/master/filter/snap.js"></script>
+
+  <script src="/filter/snap_dload.js"></script>
+  <script src="https://combinatronics.com/yegax/html-cam-viewer/master/filter/snap_dload.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 

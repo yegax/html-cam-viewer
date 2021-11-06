@@ -1,0 +1,95 @@
+#container {
+    margin-top: 25px;
+    width: 750px;
+    height: 586px;
+    background-color: rgb(21, 21, 21);
+    border: 0px #333 transparent;
+    opacity: 72%;
+    border-radius: 9px
+  }
+  #container-header {
+    width: 750px;
+    height: 26px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    background-color: rgb(12, 12, 12);
+    opacity: 70%;
+  }
+
+  #container2 {
+    margin-top: 25px;
+    width: 291px;
+    height: 586px;
+    border: 1px rgb(0, 0, 0) transparent;
+    background-color: rgb(21, 21, 21);
+    opacity: 72%;
+    margin-right: 9px;
+    border-radius: 9px;
+  }
+
+  #container2-header {
+    width: 291px;
+    height: 26px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    background-color: rgb(12, 12, 12);
+    opacity: 70%;
+  }
+
+  #container3 {
+    margin-top: 25px;
+    width: 291px;
+    height: 586px;
+    border: 1px rgb(0, 0, 0) transparent;
+    background-color: rgb(21, 21, 21);
+    opacity: 72%;
+    margin-left: 9px;
+    border-radius: 9px;
+  }
+
+  #container3-header {
+    width: 291px;
+    height: 26px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    background-color: rgb(12, 12, 12);
+    opacity: 70%;
+  }
+
+  .buttonElement {
+    background-color: rgb(12, 12, 12);
+    font-size: 19px;
+    opacity: 60%;
+    padding-top: 6px;
+    margin: 2px;
+    padding-bottom: 8px;
+    border-radius: 10px;
+  }
+  .buttonElement:hover{
+    background-color: rgb(36, 36, 36);
+  }
+  .active{
+    background-color: rgb(36, 36, 36);
+  }
+  .buttonElement:active{
+    background-color: rgb(36, 36, 36);
+  }
+  button.buttonElement:active{
+    background-color: rgb(36, 36, 36);
+  }
+
+  #videoElement {
+    padding-top: 5px;
+    width: 768px;
+    height: 552px;
+    transform: scaleX(-1);
+  }
+
+  .flipimg {
+    transform: scaleX(-1);
+  }
+
+  body {
+    background-color: rgb(29, 29, 29);
+  }
+  
