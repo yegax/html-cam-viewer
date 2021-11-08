@@ -64,14 +64,14 @@
           <div id="container-header">
             <h1 class="font-bold text-left px-2 text-white"> Camera </h1> 
           </div>
-          <video autoplay="true" id="videoElement" class="filter contrast-70">
+          <video oncontextmenu="return false;" autoplay="true" id="videoElement" class="filter contrast-70">
           </video>
         </div>
         <br>
         <div class="text-align-bottom">
-          <p class="font-mono opacity-25 text-white text-xs text-center"> Powered by 
+          <p class="font-mono opacity-20 text-white text-xs text-center"> Powered by 
           <a href="https://www.yegax.com/"><u>  Yegax Digital</u> </a> </p>
-          <p class="font-mono opacity-25 text-white text-xs text-center"> 2021 </p>
+          <p class="font-mono opacity-20 text-white text-xs text-center"> 2021 </p>
         </div>
       </div>
 
@@ -83,7 +83,7 @@
           <div class="grid grid-cols-2 flex items-stretch place-content-center gap-3 m-3 p-2">
             <button id="snap" onclick="snap()" class="buttonElement col-span-1"> Screenshot </button>
             <button id="download" class="buttonElement col-span-1"> Download </button>
-            <canvas class="w-60 h-55 content-center rounded-xl mx-1.5 flipimg"></canvas>
+            <canvas oncontextmenu="return false;" id="snap-canvas" class="w-60 h-55 content-center rounded-xl mx-1.5 flipimg"></canvas>
           </div>
         </div>
       </div>
