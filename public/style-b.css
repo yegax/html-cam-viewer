@@ -62,9 +62,11 @@
     margin: 2px;
     padding-bottom: 8px;
     border-radius: 10px;
+    transition: 0.5s;
   }
   .buttonElement:hover{
     background-color: rgb(36, 36, 36);
+    transition: 0.5s;
   }
   .active{
     background-color: rgb(36, 36, 36);
@@ -89,5 +91,41 @@
 
   body {
     background-color: rgb(29, 29, 29);
+  }
+
+  .slidecontainer {
+    width: 100%;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    background: rgb(12, 12, 12);
+    border-radius: 30px;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 30px;
+    background: #414141;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #414141;
+    cursor: pointer;
+  }
+
+  .bg-black-header{
+    background-color: rgb(12, 12, 12);;
   }
   
