@@ -55,16 +55,16 @@
               <button id="effect-sepia" class="buttonElement col-span-1"> WIP </button>              
           </div>
           <div class="slidecontainer pt-2 px-6">
-            <input type="range" min="0" max="100" value="50" class="slider" id="bright-slider">
+            <input type="range" oninput="set(this, 'brightness');" value="1" step="0.1" min="0" max="2" class="slider" id="bright-slider">
             <p class="text-center opacity-60"> Brightness <span id="demo"></span></p>
             <div class="slidecontainer">
-              <input type="range" min="0" max="100" value="50" class="slider" id="cont-slider">
+              <input type="range" oninput="set(this, 'contrast');" value="1" step="0.1" min="0" max="2" class="slider" id="cont-slider">
               <p class="text-center opacity-60"> Contrast <span id="demo"></span></p>
             </div>
             <div class="slidecontainer">
-              <input type="range" min="1" max="100" value="50" class="slider" id="satu-slider">
+              <input type="range" oninput="set(this, 'blur');" value="1" step="0.1" min="0" max="2" class="slider" id="satu-slider">
               <p class="text-center opacity-60"> Saturation <span id="demo"></span></p>
-            </div>
+            </div>  
           </div>
         </div>
       </div>
@@ -103,8 +103,22 @@
           <div class="grid grid-cols-2 flex items-stretch place-content-center gap-3 m-3 p-2">
             <button id="snap" onclick="snap()" class="buttonElement col-span-1"> Photo </button>
             <button id="download" class="buttonElement col-span-1"> Download </button>
-            <canvas oncontextmenu="return false;" id="snap-canvas" class="w-60 h-55 content-center rounded-xl mx-1.5 flipimg"></canvas>
+            <div class="canvas-container">
+              <p class="text-center text-left -my-6 cursor-default opacity-60">Preview</p>
+            <canvas oncontextmenu="return false;" id="snap-canvas" class="my-6 w-60 h-55 content-center rounded-b-xl mx-1-2 flipimg"></canvas>  
+            </div>     
           </div>
+
+          <div class="grid grid-cols-2 flex items-stretch place-content-center gap-3 m-3 p-2">
+            <button id="Download" onclick="snap()" class="buttonElement col-span-1"> Download </button>
+            <button id="download" class="buttonElement col-span-1">Preview </button>
+          </div>
+
+          <div class="slidecontainer pt-2 px-6">
+            <input type="range"  value="1" step="0.1" min="0" max="2" class="slider" id="timer-slider">
+            <p class="text-center opacity-60"> Brightness <span id="demo"></span></p> 
+          </div>
+          
         </div>
       </div>
     </div>
@@ -118,6 +132,9 @@
     </footer>
 
   </main> 
+
+  <script src="/filter/rangeEffects.js"></script>
+
   <script src="/filter/brightness.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -143,7 +160,6 @@
   <script src="https://combinatronics.com/yegax/html-cam-viewer/master/filter/invert.js"></script>
 
   <script src="https://combinatronics.com/yegax/html-cam-viewer/master/filter/warm.js"></script>
-
 
   <script src="https://combinatronics.com/yegax/html-cam-viewer/master/filter/cool.js"></script>
 

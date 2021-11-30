@@ -93,6 +93,14 @@
     background-color: rgb(29, 29, 29);
   }
 
+  .canvas-container {
+    width: 250px;
+    height: 210px;
+    background: rgb(12, 12, 12);
+    border-radius: 16px;
+    padding-top: 26px;
+  }
+
   .slidecontainer {
     width: 100%;
   }
@@ -128,4 +136,9 @@
   .bg-black-header{
     background-color: rgb(12, 12, 12);;
   }
+
+.mx-1-2{
+  margin-left: 0.30rem;
+  margin-right: 0.30rem;
+}
   
