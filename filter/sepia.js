@@ -1,9 +1,21 @@
 $(document).ready(function(){
 
   $("#effect-sepia").click(function() {
-    $("#videoElement").removeClass();
-    $("#videoElement").addClass("sepia");
-    //$(this).toggleClass('active');
+    
+    $("#effect-warm").removeClass("buttonactive");
+    $("#effect-grayscale").removeClass("buttonactive");
+    $("#effect-grayscale2").removeClass("buttonactive");
+    $("#effect-blur").removeClass("buttonactive");
+    $("#effect-invert").removeClass("buttonactive");
+    $("#effect-cool").removeClass("buttonactive");
+    $("#effect-nightvis").removeClass("buttonactive");
+    $("#effect-hue").removeClass("buttonactive");
+    $("#effect-test").removeClass("buttonactive");
+    $("#effect-test").removeClass("buttonactive");
+
+    $("#videoElement").removeClass();  
+    $("#videoElement").toggleClass("sepia");
+    $("#effect-sepia").toggleClass("buttonactive");
     });
 
   });
