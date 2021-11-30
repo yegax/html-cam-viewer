@@ -12,6 +12,7 @@ $(document).ready(function(){
     $("#effect-invert").removeClass("buttonactive");
     $("#effect-test").removeClass("buttonactive");
     $("#effect-test").removeClass("buttonactive");
+    $("#effect-noeffect").removeClass("buttonactive");
 
     $("#videoElement").removeClass();  
     $("#videoElement").toggleClass("hue");

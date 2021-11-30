@@ -1,7 +1,7 @@
 $(document).ready(function(){
   
   $("#effect-cool").click(function() {
-    
+
     $("#effect-sepia").removeClass("buttonactive");
     $("#effect-grayscale").removeClass("buttonactive");
     $("#effect-grayscale2").removeClass("buttonactive");
@@ -12,6 +12,7 @@ $(document).ready(function(){
     $("#effect-hue").removeClass("buttonactive");
     $("#effect-test").removeClass("buttonactive");
     $("#effect-test").removeClass("buttonactive");
+    $("#effect-noeffect").removeClass("buttonactive");
 
     $("#videoElement").removeClass();
     $("#videoElement").toggleClass("cool");
