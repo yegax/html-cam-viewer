@@ -14,6 +14,9 @@ $(document).ready(function(){
     $("#effect-test").removeClass("buttonactive");
     $("#effect-noeffect").removeClass("buttonactive");
 
+    $("#videoElement").removeClass();
+    $("#effect-nightvis").toggleClass("buttonactive");
+
     var effectActive = $("#effect-nightvis").hasClass("buttonactive")
     if (effectActive){
       $("#videoElement").toggleClass("nightvis");

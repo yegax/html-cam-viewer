@@ -14,7 +14,6 @@ $(document).ready(function(){
     $("#effect-test").removeClass("buttonactive");
     $("#effect-test").removeClass("buttonactive");
 
-
     $("#videoElement").removeClass();
     $("#effect-noeffect").toggleClass("buttonactive");
 
