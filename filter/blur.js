@@ -17,8 +17,8 @@ $(document).ready(function(){
     $("#videoElement").removeClass();
     $("#effect-blur").toggleClass("buttonactive");
 
-    var effectActive = $("#effect-blur").hasClass("buttonactive")
-    if (effectActive){
+    var effectActive2 = $("#effect-blur").hasClass("buttonactive")
+    if (effectActive2){
       $("#videoElement").toggleClass("blur");
     } else {
       $("#videoElement").removeClass();
