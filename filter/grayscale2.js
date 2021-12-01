@@ -14,9 +14,11 @@ $(document).ready(function(){
     $("#effect-test").removeClass("buttonactive");
     $("#effect-noeffect").removeClass("buttonactive");
 
-    $("#videoElement").removeClass();  
-    $("#videoElement").toggleClass("grayscale2");
-    $("#effect-grayscale2").toggleClass("buttonactive");
+    var effectActive = $("#effect-grayscale2").hasClass("buttonactive")
+    if (effectActive){
+      $("#videoElement").toggleClass("grayscale2");
+    } else {
+      $("#videoElement").removeClass();
+    }
     });
-
   });

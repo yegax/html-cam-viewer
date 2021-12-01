@@ -1,3 +1,5 @@
+
+
 //get handles on the video and canvas elements
 var video = document.querySelector('video');
 var canvas = document.querySelector('canvas');
@@ -26,3 +28,24 @@ function snap() {
     //grab snapshot fro video feedback
     context.drawImage(video, 0, 0, w, h);
 }
+
+$(document).ready(function(){
+    
+$("#flash").on('click', function() {
+    $("#flash").toggleClass("buttonactive");
+});
+
+$("#timer").on('click', function() {
+    $("#timer").toggleClass("buttonactive");
+});
+
+$("#snap").on('click', function() {
+    setTimeout(function() { snap();}, 350);
+    var flashActive = $("#flash").hasClass("buttonactive")
+    if (flashActive){
+        $("#flashscreen").addClass("flash-container-active").fadeIn(50).delay(200).fadeOut(300);
+    } else {
+        $("#flashscreen").removeClass("flash-container-active");
+    }
+});
+});

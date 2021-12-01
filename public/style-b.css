@@ -83,9 +83,6 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   }
 
-
-
-
   #videoElement {
     padding-top: 5px;
     width: 768px;
@@ -106,6 +103,7 @@
     height: 210px;
     background: rgb(12, 12, 12);
     border-radius: 16px;
+    opacity: 78%;
     padding-top: 26px;
   }
 
@@ -148,5 +146,19 @@
 .mx-1-2{
   margin-left: 0.30rem;
   margin-right: 0.30rem;
+}
+
+.flash-container{
+  pointer-events: none;
+  opacity: 0%;
+  width: 1390px;
+  height: 600px;
+  border-radius: 25px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0px 80px rgb(255, 255, 255);
+}
+.flash-container-active{
+  opacity: 100%;
+  background-color: rgb(255, 255, 255);
 }
   

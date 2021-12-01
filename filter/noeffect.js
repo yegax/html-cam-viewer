@@ -17,6 +17,12 @@ $(document).ready(function(){
 
     $("#videoElement").removeClass();
     $("#effect-noeffect").toggleClass("buttonactive");
-    });
 
+    var effectActive = $("#effect-noeffect").hasClass("buttonactive")
+    if (effectActive){
+      $("#videoElement").removeClass();
+    } else {
+      $("#videoElement").removeClass();
+    }
+    });
   });

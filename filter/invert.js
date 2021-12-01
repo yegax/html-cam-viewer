@@ -14,9 +14,14 @@ $(document).ready(function(){
     $("#effect-test").removeClass("buttonactive");
     $("#effect-noeffect").removeClass("buttonactive");
 
-    $("#videoElement").removeClass();  
-    $("#videoElement").toggleClass("invert");
+    $("#videoElement").removeClass();
     $("#effect-invert").toggleClass("buttonactive");
-    });
 
+    var effectActive = $("#effect-invert").hasClass("buttonactive")
+    if (effectActive){
+      $("#videoElement").toggleClass("invert");
+    } else {
+      $("#videoElement").removeClass();
+    }
   });
+});
