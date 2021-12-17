@@ -30,22 +30,43 @@ function snap() {
 }
 
 $(document).ready(function(){
+
+$("#close-help").click(function() {
+    $('#helpscreen').hide("fade");
+});
+
+$("#help-button").click(function() {
+    $('#helpscreen').toggle("fade");
+});
+    
     
 $("#flash").on('click', function() {
     $("#flash").toggleClass("buttonactive");
 });
 
 $("#timer").on('click', function() {
-    $("#timer").toggleClass("buttonactive");
+    $("#timer").toggleClass("buttonactive") ;
 });
 
 $("#snap").on('click', function() {
-    setTimeout(function() { snap();}, 350);
+
+    var timerActive = $("#timer").hasClass("buttonactive")
     var flashActive = $("#flash").hasClass("buttonactive")
-    if (flashActive){
-        $("#flashscreen").addClass("flash-container-active").fadeIn(50).delay(200).fadeOut(300);
+
+    if (timerActive){
+        $("#timerscreen").addClass("timer-one-start").fadeIn(300).delay(2000).fadeOut(200);
+        setTimeout(function() { snap();}, 2600);
+    } else {
+        setTimeout(function() { snap();}, 350);
+    }
+
+    if (flashActive && timerActive){
+        $("#flashscreen").addClass("flash-container-active").delay(2000).fadeIn(200).delay(300).fadeOut(300);
+    } else if (flashActive){
+        $("#flashscreen").addClass("flash-container-active").fadeIn(200).delay(100).fadeOut(400);
     } else {
         $("#flashscreen").removeClass("flash-container-active");
     }
 });
+
 });

@@ -58,9 +58,9 @@
     background-color: rgb(12, 12, 12);
     font-size: 19px;
     opacity: 60%;
-    padding-top: 6px;
+    padding-top: 11px;
     margin: 2px;
-    padding-bottom: 8px;
+    padding-bottom: 7px;
     border-radius: 10px;
     transition: 0.5s;
   }
@@ -79,8 +79,9 @@
   }
 
   .buttonactive {
-    background-color: rgb(36, 36, 36);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    background-color: rgb(211, 211, 211);
+    color: rgb(0, 0, 0);
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.8);
   }
 
   #videoElement {
@@ -96,6 +97,20 @@
 
   body {
     background-color: rgb(29, 29, 29);
+    font-family: 'Lekton', sans-serif;
+  }
+
+  button {
+    font-weight: bolder;
+  }
+
+  h1{
+    font-weight: bolder;
+    opacity: 65%;
+  }
+
+  p {
+    font-weight: bolder;
   }
 
   .canvas-container {
@@ -150,6 +165,7 @@
 
 .flash-container{
   pointer-events: none;
+  z-index: 10;
   opacity: 0%;
   width: 1390px;
   height: 600px;
@@ -161,4 +177,53 @@
   opacity: 100%;
   background-color: rgb(255, 255, 255);
 }
-  
+
+.timer-one{
+  background-color: rgb(67, 67, 67);
+  width: 90px;
+  height: 90px;
+  opacity: 0%;
+  margin-top: 270px;
+  border-radius: 100%;
+}
+.timer-one::before {
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
+  content: "";
+  opacity: 70%;
+  font-size: 65px;
+  padding-left: 30px;
+  animation-name: timerframes;
+  animation-duration: 3s;
+
+}
+@keyframes timerframes {
+  0% {content: "3";}
+  25%  {content: "3";}
+  50% {content: "2";}
+  75% {content: "1";}
+  100% {content: "1";}
+}
+
+.timer-one-start {
+  opacity: 65%;
+  animation-play-state: initial;
+}
+
+.help-container {
+  width: 1373px;
+  height: 586px;
+  border: 1px rgb(0, 0, 0) transparent;
+  background-color: rgb(21, 21, 21);
+  margin-top: 25px;
+  opacity: 100%;
+  border-radius: 9px
+}
+.help-container-header {
+  width: 1373px;
+  height: 26px;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  background-color: rgb(12, 12, 12);
+  opacity: 100%;
+}
