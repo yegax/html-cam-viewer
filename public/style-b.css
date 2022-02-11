@@ -83,6 +83,9 @@
     color: rgb(0, 0, 0);
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.8);
   }
+  .buttonactive:hover{
+    background-color: rgb(136, 136, 136);
+  }
 
   #videoElement {
     padding-top: 5px;
@@ -96,7 +99,7 @@
   }
 
   body {
-    background-color: rgb(29, 29, 29);
+    background-color: rgb(28, 28, 28);
     font-family: 'Lekton', sans-serif;
   }
 
@@ -213,6 +216,8 @@
 .help-container {
   width: 1373px;
   height: 586px;
+  position: absolute;
+  z-index: 20;
   border: 1px rgb(0, 0, 0) transparent;
   background-color: rgb(21, 21, 21);
   margin-top: 25px;
@@ -222,8 +227,35 @@
 .help-container-header {
   width: 1373px;
   height: 26px;
+  z-index: 20;
   border-top-left-radius: 9px;
   border-top-right-radius: 9px;
   background-color: rgb(12, 12, 12);
   opacity: 100%;
+}
+
+.help-scene {
+ z-index: 9;
+}
+.help-scene-light {
+  pointer-events: none;
+  margin-left: 954px;
+  margin-top: 71px;
+  z-index: 10;
+  opacity: 98%;
+  width: 72px;
+  height: 76px;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0px 110px rgb(255, 255, 255);
+  animation-name: scene-light-anim;
+  animation-duration: 1.8s;
+  animation-iteration-count: infinite;
+}
+@keyframes scene-light-anim {
+  0% {opacity: 100%;}
+  25%  {opacity: 90%;}
+  50% {opacity: 70%;}
+  75% {opacity: 80%;}
+  100% {opacity: 100%;}
 }
