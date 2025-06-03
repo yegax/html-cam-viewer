@@ -1,0 +1,36 @@
+/* Filters CSS Properties */
+.sepia { 
+    filter: sepia(85%)saturate(150%)contrast(120%);
+  }
+
+  .grayscale {
+    filter: grayscale(100%);
+  }
+
+  .grayscale2 {
+    filter: grayscale(100%)contrast(130%)brightness(160%)blur(0.5px);
+  }
+
+  .hue{
+    filter: hue-rotate(180deg);
+  }
+
+  .blur{
+    filter: blur(3px);
+  }
+
+  .invert {
+    filter: invert(100%) contrast(120%);
+  }
+
+  .warm{
+    filter: sepia(30%)contrast(110%)brightness(160%)hue-rotate(-6deg);
+  }
+
+  .cool{
+    filter: contrast(120%)brightness(130%)hue-rotate(-20deg);
+  }
+
+  .nightvis {
+    filter: hue-rotate(-220deg)saturate(60%)brightness(270%)contrast(130%);
+  }
